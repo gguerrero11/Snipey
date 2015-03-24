@@ -14,6 +14,10 @@
 		498086251AC0DC1F00F19AE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498086241AC0DC1F00F19AE1 /* Images.xcassets */; };
 		498086281AC0DC1F00F19AE1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498086261AC0DC1F00F19AE1 /* LaunchScreen.xib */; };
 		498086341AC0DC1F00F19AE1 /* SnipeyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 498086331AC0DC1F00F19AE1 /* SnipeyTests.m */; };
+		4980863E1AC0E94D00F19AE1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980863D1AC0E94D00F19AE1 /* MapKit.framework */; };
+		498086421AC0E9F300F19AE1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4980863F1AC0E9F300F19AE1 /* Bolts.framework */; };
+		498086431AC0E9F300F19AE1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498086401AC0E9F300F19AE1 /* Parse.framework */; };
+		498086441AC0E9F300F19AE1 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 498086411AC0E9F300F19AE1 /* ParseUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,10 @@
 		4980862D1AC0DC1F00F19AE1 /* SnipeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		498086321AC0DC1F00F19AE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498086331AC0DC1F00F19AE1 /* SnipeyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnipeyTests.m; sourceTree = "<group>"; };
+		4980863D1AC0E94D00F19AE1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4980863F1AC0E9F300F19AE1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Snipey/Bolts.framework; sourceTree = "<group>"; };
+		498086401AC0E9F300F19AE1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Snipey/Parse.framework; sourceTree = "<group>"; };
+		498086411AC0E9F300F19AE1 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Snipey/ParseUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498086421AC0E9F300F19AE1 /* Bolts.framework in Frameworks */,
+				498086431AC0E9F300F19AE1 /* Parse.framework in Frameworks */,
+				498086441AC0E9F300F19AE1 /* ParseUI.framework in Frameworks */,
+				4980863E1AC0E94D00F19AE1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +75,10 @@
 		4980860B1AC0DC1E00F19AE1 = {
 			isa = PBXGroup;
 			children = (
+				4980863F1AC0E9F300F19AE1 /* Bolts.framework */,
+				498086401AC0E9F300F19AE1 /* Parse.framework */,
+				498086411AC0E9F300F19AE1 /* ParseUI.framework */,
+				4980863D1AC0E94D00F19AE1 /* MapKit.framework */,
 				498086161AC0DC1F00F19AE1 /* Snipey */,
 				498086301AC0DC1F00F19AE1 /* SnipeyTests */,
 				498086151AC0DC1F00F19AE1 /* Products */,
@@ -343,6 +359,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Snipey",
+				);
 				INFOPLIST_FILE = Snipey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +373,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Snipey",
+				);
 				INFOPLIST_FILE = Snipey/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
