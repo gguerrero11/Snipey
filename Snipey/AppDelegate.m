@@ -6,17 +6,36 @@
 //  Copyright (c) 2015 Gabe Guerrero. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
+#import "MapViewController.h"
+
 
 @interface AppDelegate ()
 
+
 @end
+
 
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    
+    [Parse setApplicationId:@"031Fu6MXK8wj6Ntaxi9Z9GLsZILifm8JoMNRzA01"
+                  clientKey:@"EPLWlxSsjGDbv7reE1E22smS02PxQbnSJSyrUoC2"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    CLLocationManager *locationManager = [CLLocationManager new];
+    
+    [locationManager requestAlwaysAuthorization];
+    CLLocation *location = [locationManager location];
+    
     return YES;
 }
 
